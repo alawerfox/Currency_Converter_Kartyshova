@@ -1,0 +1,2 @@
+ru/pdr/currencyconverterkartyshova/BuildConfig.java
+ ru.pdr.currencyconverterkartyshova.BuildConfig
