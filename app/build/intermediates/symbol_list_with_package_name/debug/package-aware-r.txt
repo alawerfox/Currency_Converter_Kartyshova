@@ -2066,6 +2066,7 @@ id notification_main_column_container
 id off
 id on
 id outline
+id outlinedTextField
 id outward
 id packed
 id parallax
@@ -2367,6 +2368,7 @@ layout test_toolbar
 layout test_toolbar_custom_background
 layout test_toolbar_elevation
 layout test_toolbar_surface
+layout text_input_currency
 layout text_view_with_line_height_from_appearance
 layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style

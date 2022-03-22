@@ -1,4 +1,4 @@
-#Sat Mar 19 16:55:27 MSK 2022
+#Tue Mar 22 11:07:03 MSK 2022
 base.2=E\:\\workspace\\CurrencyConverterKartyshova\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
 path.2=15/classes.dex
 base.1=E\:\\workspace\\CurrencyConverterKartyshova\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

@@ -2065,6 +2065,7 @@ int id notification_main_column_container 0x7f080111
 int id off 0x7f080112
 int id on 0x7f080113
 int id outline 0x7f080114
+int id outlinedTextField 0x7f0801af
 int id outward 0x7f080115
 int id packed 0x7f080116
 int id parallax 0x7f080117
@@ -2366,6 +2367,7 @@ int layout test_toolbar 0x7f0b006a
 int layout test_toolbar_custom_background 0x7f0b006b
 int layout test_toolbar_elevation 0x7f0b006c
 int layout test_toolbar_surface 0x7f0b006d
+int layout text_input_currency 0x7f0b0074
 int layout text_view_with_line_height_from_appearance 0x7f0b006e
 int layout text_view_with_line_height_from_layout 0x7f0b006f
 int layout text_view_with_line_height_from_style 0x7f0b0070
