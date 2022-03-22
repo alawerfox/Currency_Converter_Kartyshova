@@ -7,19 +7,25 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.pdr.currencyconverterkartyshova.databinding.CurrencySelectionBinding
 
-class CurrencyFragment : Fragment() {
+class CurrencyFragment : Fragment(R.layout.currency_selection) {
+
+    private var binding: CurrencySelectionBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.currency_selection, container,false)
+        return super.onCreateView(inflater, container, savedInstanceState)?.also {
+            binding = CurrencySelectionBinding.bind(it)
         }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = GridLayoutManager(context,3)

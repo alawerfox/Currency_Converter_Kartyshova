@@ -1,2 +1,12 @@
+ru/pdr/currencyconverterkartyshova/databinding/CurrencySelectionBinding.java
+ ru.pdr.currencyconverterkartyshova.databinding.CurrencySelectionBinding
+ru/pdr/currencyconverterkartyshova/CurrencyFragmentDirections.java
+ ru.pdr.currencyconverterkartyshova.CurrencyFragmentDirections
+ru/pdr/currencyconverterkartyshova/databinding/ViewCurrencyItemBinding.java
+ ru.pdr.currencyconverterkartyshova.databinding.ViewCurrencyItemBinding
 ru/pdr/currencyconverterkartyshova/BuildConfig.java
  ru.pdr.currencyconverterkartyshova.BuildConfig
+ru/pdr/currencyconverterkartyshova/databinding/ActivityMainBinding.java
+ ru.pdr.currencyconverterkartyshova.databinding.ActivityMainBinding
+ru/pdr/currencyconverterkartyshova/databinding/CurrencyTransferFragmentBinding.java
+ ru.pdr.currencyconverterkartyshova.databinding.CurrencyTransferFragmentBinding

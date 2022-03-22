@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/currencyFragment">
+
+    <fragment
+        android:id="@+id/currencyFragment"
+        android:name="ru.pdr.currencyconverterkartyshova.CurrencyFragment"
+        android:label="CurrencyFragment" >
+
+        <action
+            android:id="@+id/action_currencyFragment_to_currency_transfer"
+            app:destination="@id/currency_transfer" />
+    </fragment>
+    <fragment
+        android:id="@+id/currency_transfer"
+        android:name="ru.pdr.currencyconverterkartyshova.Сurrency_transfer"
+        android:label="currency_transfer" />
+</navigation>
