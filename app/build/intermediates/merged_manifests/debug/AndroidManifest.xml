@@ -20,10 +20,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.CurrencyConverterKartyshova" >
+        android:theme="@style/AppTheme" >
         <activity
             android:name="ru.pdr.currencyconverterkartyshova.MainActivity"
-            android:exported="true" >
+            android:exported="true" />
+        <activity
+            android:name="ru.pdr.currencyconverterkartyshova.StartActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.Launcher" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,6 +41,18 @@
         <uses-library
             android:name="androidx.window.sidecar"
             android:required="false" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="ru.pdr.currencyconverterkartyshova.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>

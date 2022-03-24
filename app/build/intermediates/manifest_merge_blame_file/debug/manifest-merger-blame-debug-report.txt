@@ -11,15 +11,15 @@
 9-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:5:5-66
+11-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:5:5-67
 11-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:5:22-64
 12
 13    <application
-13-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:7:5-23:19
+13-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:7:5-27:19
 14        android:allowBackup="true"
 14-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.5.0-rc01] C:\Users\Nikolay\.gradle\caches\transforms-3\05af1cf98afb05190014bf072769daf9\transformed\core-1.5.0-rc01\AndroidManifest.xml:24:18-86
+15-->[androidx.core:core:1.7.0] C:\Users\Nikolay\.gradle\caches\transforms-3\1d40bb58a5db7e79149c8026c13a71bf\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 16        android:debuggable="true"
 17        android:extractNativeLibs="false"
 18        android:icon="@mipmap/ic_launcher"
@@ -31,38 +31,68 @@
 21        android:supportsRtl="true"
 21-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:12:9-35
 22        android:testOnly="true"
-23        android:theme="@style/Theme.CurrencyConverterKartyshova" >
-23-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:13:9-65
+23        android:theme="@style/AppTheme" >
+23-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:13:9-40
 24        <activity
-24-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:14:9-22:20
+24-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:14:9-16:39
 25            android:name="ru.pdr.currencyconverterkartyshova.MainActivity"
 25-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:15:13-41
-26            android:exported="true" >
+26            android:exported="true" />
 26-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:16:13-36
-27            <intent-filter>
-27-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:17:13-21:29
-28                <action android:name="android.intent.action.MAIN" />
-28-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:18:17-69
-28-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:18:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:20:17-77
-30-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:20:27-74
-31            </intent-filter>
-32        </activity>
+27        <activity
+27-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:17:9-26:20
+28            android:name="ru.pdr.currencyconverterkartyshova.StartActivity"
+28-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:18:13-42
+29            android:exported="true"
+29-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:19:13-36
+30            android:theme="@style/AppTheme.Launcher" >
+30-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:20:13-53
+31            <intent-filter>
+31-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:21:13-25:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:22:17-69
+32-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:22:25-66
 33
-34        <uses-library
-34-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
-35            android:name="androidx.window.extensions"
-35-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
-36            android:required="false" />
-36-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
-37        <uses-library
-37-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
-38            android:name="androidx.window.sidecar"
-38-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
-39            android:required="false" />
-39-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
-40    </application>
-41
-42</manifest>
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:24:17-77
+34-->E:\workspace\CurrencyConverterKartyshova\app\src\main\AndroidManifest.xml:24:27-74
+35            </intent-filter>
+36        </activity>
+37
+38        <uses-library
+38-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+39            android:name="androidx.window.extensions"
+39-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+40            android:required="false" />
+40-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+41        <uses-library
+41-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+42            android:name="androidx.window.sidecar"
+42-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+43            android:required="false" />
+43-->[androidx.window:window:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\9ca76d14cc88de9256568e0abb57c7eb\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+44
+45        <provider
+45-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\a1dc969e24b15b47837d1d4be9f6321f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+46            android:name="androidx.startup.InitializationProvider"
+46-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\a1dc969e24b15b47837d1d4be9f6321f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+47            android:authorities="ru.pdr.currencyconverterkartyshova.androidx-startup"
+47-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\a1dc969e24b15b47837d1d4be9f6321f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+48            android:exported="false" >
+48-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\a1dc969e24b15b47837d1d4be9f6321f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+49            <meta-data
+49-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\a1dc969e24b15b47837d1d4be9f6321f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+50                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+50-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\a1dc969e24b15b47837d1d4be9f6321f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+51                android:value="androidx.startup" />
+51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Nikolay\.gradle\caches\transforms-3\a1dc969e24b15b47837d1d4be9f6321f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+52            <meta-data
+52-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Nikolay\.gradle\caches\transforms-3\b79cdac53c9aef22e7bddc869dc74718\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+53                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+53-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Nikolay\.gradle\caches\transforms-3\b79cdac53c9aef22e7bddc869dc74718\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+54                android:value="androidx.startup" />
+54-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Nikolay\.gradle\caches\transforms-3\b79cdac53c9aef22e7bddc869dc74718\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+55        </provider>
+56    </application>
+57
+58</manifest>

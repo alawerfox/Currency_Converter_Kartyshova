@@ -28,7 +28,8 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textStyle="bold"
-            tools:text="валюта" />
+            tools:text="валюта"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +43,8 @@
             android:layout_height="wrap_content"
             android:textSize="26sp"
             android:textStyle="bold"
-            tools:text="цена" />
+            tools:text="цена"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
