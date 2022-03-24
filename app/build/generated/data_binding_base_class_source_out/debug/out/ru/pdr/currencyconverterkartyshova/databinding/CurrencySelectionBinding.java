@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,11 +21,15 @@ public final class CurrencySelectionBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final TextInputEditText datePickerActions;
+
+  @NonNull
   public final RecyclerView recyclerView;
 
   private CurrencySelectionBinding(@NonNull LinearLayout rootView,
-      @NonNull RecyclerView recyclerView) {
+      @NonNull TextInputEditText datePickerActions, @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
+    this.datePickerActions = datePickerActions;
     this.recyclerView = recyclerView;
   }
 
@@ -55,13 +60,19 @@ public final class CurrencySelectionBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.date_picker_actions;
+      TextInputEditText datePickerActions = ViewBindings.findChildViewById(rootView, id);
+      if (datePickerActions == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerView;
       RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
         break missingId;
       }
 
-      return new CurrencySelectionBinding((LinearLayout) rootView, recyclerView);
+      return new CurrencySelectionBinding((LinearLayout) rootView, datePickerActions, recyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4,6 +4,10 @@
         "source": "E:\\workspace\\CurrencyConverterKartyshova\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "E:\\workspace\\CurrencyConverterKartyshova\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_back.xml.flat",
+        "source": "E:\\workspace\\CurrencyConverterKartyshova\\app\\src\\main\\res\\drawable\\ic_back.xml"
+    },
+    {
         "merged": "E:\\workspace\\CurrencyConverterKartyshova\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "E:\\workspace\\CurrencyConverterKartyshova\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
@@ -16,8 +20,16 @@
         "source": "E:\\workspace\\CurrencyConverterKartyshova\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "E:\\workspace\\CurrencyConverterKartyshova\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_currency_transfer.xml.flat",
+        "source": "E:\\workspace\\CurrencyConverterKartyshova\\app\\src\\main\\res\\drawable\\bg_currency_transfer.xml"
+    },
+    {
         "merged": "E:\\workspace\\CurrencyConverterKartyshova\\app\\build\\intermediates\\merged_res\\debug\\layout_view_currency_item.xml.flat",
         "source": "E:\\workspace\\CurrencyConverterKartyshova\\app\\src\\main\\res\\layout\\view_currency_item.xml"
+    },
+    {
+        "merged": "E:\\workspace\\CurrencyConverterKartyshova\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_currency_item.xml.flat",
+        "source": "E:\\workspace\\CurrencyConverterKartyshova\\app\\src\\main\\res\\drawable\\bg_currency_item.xml"
     },
     {
         "merged": "E:\\workspace\\CurrencyConverterKartyshova\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",

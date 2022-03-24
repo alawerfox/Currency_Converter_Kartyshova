@@ -15,6 +15,11 @@
     </fragment>
     <fragment
         android:id="@+id/currency_transfer"
-        android:name="ru.pdr.currencyconverterkartyshova.Сurrency_transfer"
-        android:label="currency_transfer" />
+        android:name="ru.pdr.currencyconverterkartyshova.CurrencyTransferFragment"
+        android:label="currency_transfer">
+
+        <argument
+            android:name="arg"
+            app:argType="ru.pdr.currencyconverterkartyshova.CurrencyTransferArg" />
+    </fragment>
 </navigation>
