@@ -45,4 +45,3 @@ interface OnCurrencyClickListener {
     fun onCurrencyClick(currency: Currency)
 }
 
-class Currency(val name: String, val code: String, val value: Double)

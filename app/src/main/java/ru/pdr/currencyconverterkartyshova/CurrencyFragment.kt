@@ -15,14 +15,13 @@ import ru.pdr.currencyconverterkartyshova.databinding.CurrencySelectionBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
-@SuppressLint("SimpleDateFormat")
 class CurrencyFragment : Fragment(R.layout.currency_selection) {
 
     private var binding: CurrencySelectionBinding? = null
 
     private val navController: NavController by lazy { findNavController() }
 
-    private val simpleDateFormat = SimpleDateFormat("dd MMMM yyyy")
+    private val simpleDateFormat = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,11 +45,9 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
                 binding?.datePickerActions?.setText(simpleDateFormat.format(date))
             }
 
-            dialog.show(parentFragmentManager, "")
+            dialog.show(parentFragmentManager, "Recyclerview")
         }
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = GridLayoutManager(context, 3)
         val items = listOf(
             Currency("Российский рубль","RU", 200.0),
             Currency("Российский рубль","RU", 200.0),
@@ -75,8 +72,12 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
             }
         }
 
-        recyclerView.adapter = currencyAdapter
+        binding?.recyclerView?.apply {
+            layoutManager = GridLayoutManager(context, 3)
+            adapter = currencyAdapter
+        }
     }
+
     override fun onDestroyView() {
         binding = null
         super.onDestroyView()
