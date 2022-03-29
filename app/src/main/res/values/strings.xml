@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Currency Converter Kartyshova</string>
+    <string name="app_name">Currency Converter </string>
+    <string name="Date">Currency Converter </string>
+    <string name="date">Дата</string>
+    <string name="currency">Валюты</string>
+    <string name="rate">Курс</string>
 </resources>
