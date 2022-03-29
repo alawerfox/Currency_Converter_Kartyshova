@@ -1,9 +1,15 @@
 package ru.pdr.currencyconverterkartyshova
 
 import android.app.Application
+import org.koin.android.ext.koin.androidLogger
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.startKoin
+import org.koin.core.logger.PrintLogger
 import org.koin.dsl.module
+
+private val koinModule = module {
+    viewModel { CurrencyModel() }
+}
 
 class CurrencyApplication : Application() {
 
@@ -11,9 +17,7 @@ class CurrencyApplication : Application() {
         super.onCreate()
 
         startKoin {
-            module {
-                viewModel { CurrencyModel() }
-            }
+            modules(koinModule)
         }
     }
 }
