@@ -1,15 +1,14 @@
 package ru.pdr.currencyconverterkartyshova
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.datepicker.MaterialDatePicker
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.pdr.currencyconverterkartyshova.databinding.CurrencySelectionBinding
@@ -24,7 +23,7 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
 
     private val navController: NavController by lazy { findNavController() }
 
-    private val viewModel: CurrencyModel by viewModel()
+    private val viewModel: CurrencyViewModel by viewModel()
 
     private val simpleDateFormat = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
 
@@ -33,6 +32,10 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
 
         viewModel.currency.observe(this) {
             currencyAdapter.update(it)
+        }
+        viewModel.progress.observe(this) {
+            binding?.recyclerView?.isVisible = !it
+            binding?.progressBar?.isVisible = it
         }
     }
 
@@ -55,7 +58,7 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
 
             dialog.addOnPositiveButtonClickListener {
                 val date = Date(it)
-                binding?.datePickerActions?.setText(simpleDateFormat.format(date))
+                onDateChanged(date)
             }
 
             dialog.show(parentFragmentManager, "Recyclerview")
@@ -72,10 +75,17 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
             layoutManager = GridLayoutManager(context, 3)
             adapter = currencyAdapter
         }
+
+        onDateChanged()
     }
 
     override fun onDestroyView() {
         binding = null
         super.onDestroyView()
+    }
+
+    private fun onDateChanged(date: Date = Date()) {
+        binding?.datePickerActions?.setText(simpleDateFormat.format(date))
+        viewModel.onDateChanged(date)
     }
 }

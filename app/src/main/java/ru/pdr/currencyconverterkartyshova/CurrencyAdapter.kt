@@ -17,7 +17,7 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
         RecyclerView.ViewHolder(binding.root) {
         fun bind(currency: Currency) {
             binding.currencyItemName.text = currency.code
-            binding.currencyItemValue.text = currency.value.toString()
+            binding.currencyItemValue.text = itemView.context.getString(R.string.currency_value, currency.value)
         }
     }
 
