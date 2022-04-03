@@ -7,10 +7,6 @@ import org.koin.core.context.startKoin
 import org.koin.core.logger.PrintLogger
 import org.koin.dsl.module
 
-private val koinModule = module {
-    viewModel { CurrencyModel() }
-}
-
 class CurrencyApplication : Application() {
 
     override fun onCreate() {

@@ -5,10 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class CurrencyModel : ViewModel() {
-    val currency by lazy { MutableLiveData<List<Currency>>() }
+    val _currency = MutableLiveData<List<Currency>>()
+    val currency: LiveData <List<Currency>>
+    get() = _currency
+
 
     init {
-        currency.value = listOf(
+        _currency.value = listOf(
             Currency("Российский рубль","RU", 200.0),
             Currency("Российский рубль","RU", 200.0),
             Currency("Российский рубль","RU", 200.0),
