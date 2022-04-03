@@ -11,6 +11,11 @@ class CurrenciesRepository(
 ) {
 
     suspend fun fetchCurrencies(date: String): CurrenciesResponse = withContext(Dispatchers.IO) {
-        currencyApi.getCurrencies(date)
+        try {
+            val data = currencyApi.getCurrencies(date)
+            CurrenciesResponse.Success(data)
+        } catch (e: Throwable) {
+            CurrenciesResponse.Failure(e)
+        }
     }
 }

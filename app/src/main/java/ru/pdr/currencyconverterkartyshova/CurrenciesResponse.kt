@@ -2,7 +2,12 @@ package ru.pdr.currencyconverterkartyshova
 
 import com.google.gson.annotations.SerializedName
 
-data class CurrenciesResponse(
+sealed class CurrenciesResponse {
+    data class Success(val data: CurrenciesResponse1) : CurrenciesResponse()
+    data class Failure(val throwable: Throwable) : CurrenciesResponse()
+}
+
+data class CurrenciesResponse1(
     @SerializedName("Valute")
     val currencies: Map<String, CurrencyListInfo>
 )
