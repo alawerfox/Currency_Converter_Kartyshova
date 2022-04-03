@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:navigationIcon="@drawable/ic_back"
@@ -59,29 +60,36 @@
         android:elevation="@dimen/shadow">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:hint="RUB" />
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                tools:hint="DOL"
+                android:text="0"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/currency_editText1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_padding">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/currency_editText2"
+                android:id="@+id/editText_rub"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:hint="DOL" />
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:hint="RUB"
+                android:text="0"/>
+
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 

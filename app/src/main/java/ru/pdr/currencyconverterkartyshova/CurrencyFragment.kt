@@ -8,6 +8,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.datepicker.MaterialDatePicker
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -67,7 +68,11 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
         currencyAdapter.clickListener = object : OnCurrencyClickListener {
             override fun onCurrencyClick(currency: Currency) {
                 val arg = CurrencyTransferArg(currency.name, currency.code, currency.value)
-                navController.navigate(CurrencyFragmentDirections.actionCurrencyFragmentToCurrencyTransfer(arg))
+                navController.navigate(
+                    CurrencyFragmentDirections.actionCurrencyFragmentToCurrencyTransfer(
+                        arg
+                    )
+                )
             }
         }
 

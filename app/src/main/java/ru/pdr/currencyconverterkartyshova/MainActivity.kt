@@ -3,6 +3,7 @@ package ru.pdr.currencyconverterkartyshova
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.ui.NavigationUI
 import ru.pdr.currencyconverterkartyshova.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
