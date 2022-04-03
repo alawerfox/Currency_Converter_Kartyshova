@@ -9,9 +9,12 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class CurrencyViewModel(
-    private val currenciesRepository: CurrenciesRepository
-) : ViewModel() {
-    val currency by lazy { MutableLiveData<List<Currency>>() }
+   private val currenciesRepository: CurrenciesRepository
+): ViewModel() {
+    val _currency = MutableLiveData<List<Currency>>()
+    val currency: LiveData <List<Currency>>
+        get() = _currency
+
     val progress = MutableLiveData<Boolean>()
 
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
@@ -22,7 +25,7 @@ class CurrencyViewModel(
                 progress.value = true
                 val response = currenciesRepository.fetchCurrencies(dateFormat.format(date))
 
-                currency.value = response.currencies.map {
+                _currency.value = response.currencies.map {
                     val value = it.value
                     Currency(value.name, value.code, value.rate)
                 }
