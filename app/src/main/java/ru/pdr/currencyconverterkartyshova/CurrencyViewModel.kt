@@ -12,15 +12,20 @@ import java.util.*
 class CurrencyViewModel(
     private val currenciesRepository: CurrenciesRepository
 ) : ViewModel() {
-    val _currency = MutableLiveData<List<Currency>>()
+    private val _currency = MutableLiveData<List<Currency>>()
     val currency: LiveData<List<Currency>>
         get() = _currency
+
+    private val _error = MutableLiveData<String>()
+    val error: LiveData<String>
+    get() = _error
 
     val progress = MutableLiveData<Boolean>()
 
     private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
 
     fun onDateChanged(date: Date) {
+        progress.value = true
         viewModelScope.launch {
             val response = currenciesRepository.fetchCurrencies(dateFormat.format(date))
             when (response) {
@@ -31,24 +36,19 @@ class CurrencyViewModel(
                     }
                 }
                 is CurrenciesResponse.Failure -> {
-                    val _error = MutableLiveData<String>()
+
                     _error.value = response.throwable.localizedMessage
-                    _error.observe()
-                        fun toast()
-                        Toast.makeText(this, "ERROR", Toast.LENGTH_SHORT).show()
-                    }
-                    }
-
-
-                    }
-
-
-                    // Передать в неё response.throwable.localizedMessage (_error.value = response.throwable.localizedMessage)
-                    // Подписаться на неё и показать toast
-                    // https://developer.android.com/guide/topics/ui/notifiers/toasts
 
                 }
             }
+        }
+        progress.value = false
+
+    }
+
+
+}
+
 
 
 
