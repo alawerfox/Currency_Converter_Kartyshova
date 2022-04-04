@@ -81,6 +81,11 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
             adapter = currencyAdapter
         }
 
+
+    }
+
+    override fun onResume() {
+        super.onResume()
         onDateChanged()
     }
 

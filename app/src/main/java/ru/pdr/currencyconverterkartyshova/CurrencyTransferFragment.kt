@@ -13,6 +13,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.pdr.currencyconverterkartyshova.databinding.CurrencyTransferFragmentBinding
+import java.text.DecimalFormat
+import java.text.NumberFormat
+import java.util.*
 
 class CurrencyTransferFragment : Fragment() {
 
@@ -24,13 +27,15 @@ class CurrencyTransferFragment : Fragment() {
 
     private val viewModel: CurrencyTransferViewModel by viewModel()
 
+    private val currencyFormat = DecimalFormat("#.00")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.RUB.observe(this) {
-            binding?.editTextRub?.setText(it.toString())
+            binding?.editTextRub?.setText(currencyFormat.format(it))
         }
         viewModel.currency.observe(this) {
-            binding?.editTextValue?.setText(it.toString())
+            binding?.editTextValue?.setText(currencyFormat.format(it))
         }
     }
 
@@ -50,7 +55,7 @@ class CurrencyTransferFragment : Fragment() {
         }
 
         binding?.toolbar?.title = fragmentArgs.arg.code
-        binding?.editTextValue?.hint = fragmentArgs.arg.code
+        binding?.editTextLayoutValue?.hint = fragmentArgs.arg.code
         binding?.currencyName?.text = fragmentArgs.arg.name
         binding?.price?.text = getString(R.string.currency_value, fragmentArgs.arg.value)
         binding?.editTextValue?.setOnEditorActionListener { textView, i, keyEvent ->
