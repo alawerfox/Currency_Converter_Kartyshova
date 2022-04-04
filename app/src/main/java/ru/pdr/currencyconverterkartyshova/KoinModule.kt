@@ -10,5 +10,5 @@ val koinModule = module {
             .getClient()
             .create(CurrencyApi::class.java)
     }
-    single { CurrenciesRepository(get()) }
+    single<CurrenciesRepository> { CurrenciesRepositoryImpl(get()) }
 }
