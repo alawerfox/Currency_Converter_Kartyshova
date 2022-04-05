@@ -4,4 +4,5 @@
     <string name="date">Дата</string>
     <string name="currency">Валюты</string>
     <string name="rate">Курс</string>
+    <string name="currency_value">%.2f ₽</string>
 </resources>

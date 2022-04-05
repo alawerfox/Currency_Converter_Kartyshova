@@ -7,8 +7,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ru.pdr.currencyconverterkartyshova.databinding.ViewCurrencyItemBinding
 
-class CurrencyAdapter(private val items: List<Currency>) :
-    RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
+class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
+
+    private var items: List<Currency> = emptyList()
 
     var clickListener: OnCurrencyClickListener? = null
 
@@ -16,9 +17,8 @@ class CurrencyAdapter(private val items: List<Currency>) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(currency: Currency) {
             binding.currencyItemName.text = currency.code
-            binding.currencyItemValue.text = currency.value.toString()
+            binding.currencyItemValue.text = itemView.context.getString(R.string.currency_value, currency.value)
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -38,6 +38,11 @@ class CurrencyAdapter(private val items: List<Currency>) :
 
     override fun getItemCount(): Int {
         return items.size
+    }
+
+    fun update(items: List<Currency>) {
+        this.items = items
+        notifyDataSetChanged()
     }
 }
 
