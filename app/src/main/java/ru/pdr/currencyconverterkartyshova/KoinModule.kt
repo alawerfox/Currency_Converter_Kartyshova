@@ -5,6 +5,7 @@ import org.koin.dsl.module
 
 val koinModule = module {
     viewModel { CurrencyViewModel(get()) }
+    viewModel { CurrencyTransferViewModel() }
     single {
         RetrofitClient
             .getClient()
