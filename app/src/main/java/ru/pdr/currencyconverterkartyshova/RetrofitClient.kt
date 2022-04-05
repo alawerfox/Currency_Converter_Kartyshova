@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-private const val clientTimeout = 20L
+private const val CLIENT_TIMEOUT = 20L
 private const val baseUrl = "https://www.cbr-xml-daily.ru/archive/"
 
 object RetrofitClient {
@@ -22,8 +22,8 @@ object RetrofitClient {
                         val interceptor = HttpLoggingInterceptor()
                         interceptor.level = HttpLoggingInterceptor.Level.BODY
                         addInterceptor(interceptor)
-                        readTimeout(clientTimeout, TimeUnit.SECONDS)
-                        writeTimeout(clientTimeout, TimeUnit.SECONDS)
+                        readTimeout(CLIENT_TIMEOUT, TimeUnit.SECONDS)
+                        writeTimeout(CLIENT_TIMEOUT, TimeUnit.SECONDS)
                     }.build()
                 )
                 .addConverterFactory(GsonConverterFactory.create())

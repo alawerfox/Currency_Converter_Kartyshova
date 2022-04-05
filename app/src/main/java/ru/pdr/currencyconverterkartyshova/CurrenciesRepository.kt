@@ -5,19 +5,20 @@ import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.*
 
+interface CurrenciesRepository {
+    suspend fun fetchCurrencies(date: String): CurrenciesResponse
+}
 
-class CurrenciesRepository(
+class CurrenciesRepositoryImpl (
     private val currencyApi: CurrencyApi
-) {
+) : CurrenciesRepository {
 
-    suspend fun fetchCurrencies(date: String): CurrenciesResponse = withContext(Dispatchers.IO) {
+    override suspend fun fetchCurrencies(date: String): CurrenciesResponse = withContext(Dispatchers.IO) {
         try {
-
-
-            currencyApi.getCurrencies(date)
-        }
-        catch (e: Throwable) {
-            CurrenciesResponse(emptyMap())
+            val data = currencyApi.getCurrencies(date)
+            CurrenciesResponse.Success(data)
+        } catch (e: Throwable) {
+            CurrenciesResponse.Failure(e)
         }
     }
 }
