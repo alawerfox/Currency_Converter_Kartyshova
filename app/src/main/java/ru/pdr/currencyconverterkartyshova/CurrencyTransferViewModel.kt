@@ -5,9 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class CurrencyTransferViewModel : ViewModel() {
-    private val _RUB = MutableLiveData<Double>()
-    val RUB: LiveData<Double>
-        get() = _RUB
+    private val _rub = MutableLiveData<Double>()
+    val rub: LiveData<Double>
+        get() = _rub
 
     private val _currency = MutableLiveData<Double>()
     val currency: LiveData<Double>
@@ -20,15 +20,11 @@ class CurrencyTransferViewModel : ViewModel() {
     }
 
     fun exchangeToRub(value: Double) {
-        _RUB.value = value * amount
+        _rub.value = value * amount
     }
 
     fun exchangeToCurrency(value: Double) {
-        if (value == 0.0) {
-            _currency.value = 0.0
-        } else {
-            _currency.value = value / amount
-        }
+        _currency.value = if(value == 0.0) 0.0 else value/amount
     }
 
 }
