@@ -31,7 +31,7 @@ class CurrencyTransferFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.RUB.observe(this) {
+        viewModel.rub.observe(this) {
             binding?.editTextRub?.setText(currencyFormat.format(it))
         }
         viewModel.currency.observe(this) {
