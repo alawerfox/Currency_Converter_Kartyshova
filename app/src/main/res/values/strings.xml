@@ -5,4 +5,6 @@
     <string name="currency">Валюты</string>
     <string name="rate">Курс</string>
     <string name="currency_value">%.2f ₽</string>
+    <string name="zero">0</string>
+    <string name="rub">RUB</string>
 </resources>

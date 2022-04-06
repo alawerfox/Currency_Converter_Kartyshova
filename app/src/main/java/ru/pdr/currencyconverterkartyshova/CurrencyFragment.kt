@@ -71,7 +71,11 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
         currencyAdapter.clickListener = object : OnCurrencyClickListener {
             override fun onCurrencyClick(currency: Currency) {
                 val arg = CurrencyTransferArg(currency.name, currency.code, currency.value)
-                navController.navigate(CurrencyFragmentDirections.actionCurrencyFragmentToCurrencyTransfer(arg))
+                navController.navigate(
+                    ru.pdr.currencyconverterkartyshova.CurrencyFragmentDirections.actionCurrencyFragmentToCurrencyTransfer(
+                        arg
+                    )
+                )
             }
         }
 
@@ -80,6 +84,11 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
             adapter = currencyAdapter
         }
 
+
+    }
+
+    override fun onResume() {
+        super.onResume()
         onDateChanged()
     }
 
