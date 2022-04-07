@@ -1,4 +1,4 @@
-package ru.pdr.currencyconverterkartyshova.fragment
+package ru.pdr.currencyconverterkartyshova
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package ru.pdr.currencyconverterkartyshova.koin
+package ru.pdr.currencyconverterkartyshova
 
 import android.app.Application
 import org.koin.android.ext.koin.androidContext
