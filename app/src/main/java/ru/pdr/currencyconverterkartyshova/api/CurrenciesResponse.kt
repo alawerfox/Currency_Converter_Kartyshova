@@ -1,9 +1,10 @@
-package ru.pdr.currencyconverterkartyshova
+package ru.pdr.currencyconverterkartyshova.api
 
 import com.google.gson.annotations.SerializedName
+import ru.pdr.currencyconverterkartyshova.Currency
 
 sealed class CurrenciesResponse {
-    data class Success(val data: CBRCurrenciesResponse) : CurrenciesResponse()
+    data class Success(val data: List<Currency>) : CurrenciesResponse()
     data class Failure(val throwable: Throwable) : CurrenciesResponse()
 }
 

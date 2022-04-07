@@ -1,4 +1,4 @@
-package ru.pdr.currencyconverterkartyshova
+package ru.pdr.currencyconverterkartyshova.fragment
 
 import android.os.Parcelable
 import androidx.navigation.NavArgs

@@ -1,6 +1,5 @@
-package ru.pdr.currencyconverterkartyshova
+package ru.pdr.currencyconverterkartyshova.api
 
-import android.app.Application
 import retrofit2.http.GET
 import retrofit2.http.Path
 

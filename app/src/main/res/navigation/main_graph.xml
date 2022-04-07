@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/currencyFragment"
-        android:name="ru.pdr.currencyconverterkartyshova.CurrencyFragment"
+        android:name="ru.pdr.currencyconverterkartyshova.fragment.CurrencyFragment"
         android:label="CurrencyFragment" >
 
         <action
@@ -15,11 +15,11 @@
     </fragment>
     <fragment
         android:id="@+id/currency_transfer"
-        android:name="ru.pdr.currencyconverterkartyshova.CurrencyTransferFragment"
+        android:name="ru.pdr.currencyconverterkartyshova.fragment.CurrencyTransferFragment"
         android:label="currency_transfer">
 
         <argument
             android:name="arg"
-            app:argType="ru.pdr.currencyconverterkartyshova.CurrencyTransferArg" />
+            app:argType="ru.pdr.currencyconverterkartyshova.fragment.CurrencyTransferArg" />
     </fragment>
 </navigation>

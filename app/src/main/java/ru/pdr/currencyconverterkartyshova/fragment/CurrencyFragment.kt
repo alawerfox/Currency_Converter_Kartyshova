@@ -1,4 +1,4 @@
-package ru.pdr.currencyconverterkartyshova
+package ru.pdr.currencyconverterkartyshova.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,6 +12,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.datepicker.MaterialDatePicker
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import ru.pdr.currencyconverterkartyshova.*
+import ru.pdr.currencyconverterkartyshova.Currency
 import ru.pdr.currencyconverterkartyshova.databinding.CurrencySelectionBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -72,9 +74,7 @@ class CurrencyFragment : Fragment(R.layout.currency_selection) {
             override fun onCurrencyClick(currency: Currency) {
                 val arg = CurrencyTransferArg(currency.name, currency.code, currency.value)
                 navController.navigate(
-                    ru.pdr.currencyconverterkartyshova.CurrencyFragmentDirections.actionCurrencyFragmentToCurrencyTransfer(
-                        arg
-                    )
+                    CurrencyFragmentDirections.actionCurrencyFragmentToCurrencyTransfer(arg)
                 )
             }
         }

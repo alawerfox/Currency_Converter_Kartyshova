@@ -1,6 +1,7 @@
-package ru.pdr.currencyconverterkartyshova
+package ru.pdr.currencyconverterkartyshova.koin
 
 import android.app.Application
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 class CurrencyApplication : Application() {
@@ -9,6 +10,7 @@ class CurrencyApplication : Application() {
         super.onCreate()
 
         startKoin {
+            androidContext(this@CurrencyApplication)
             modules(koinModule)
         }
     }

@@ -1,20 +1,19 @@
-package ru.pdr.currencyconverterkartyshova
+package ru.pdr.currencyconverterkartyshova.fragment
 
 import android.os.Bundle
-import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import androidx.core.widget.addTextChangedListener
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import ru.pdr.currencyconverterkartyshova.CurrencyTransferViewModel
+import ru.pdr.currencyconverterkartyshova.R
 import ru.pdr.currencyconverterkartyshova.databinding.CurrencyTransferFragmentBinding
 import java.text.DecimalFormat
-import java.text.NumberFormat
 import java.util.*
 
 class CurrencyTransferFragment : Fragment() {
