@@ -6,16 +6,13 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import ru.pdr.currencyconverterkartyshova.CurrencyTransferViewModel
 import ru.pdr.currencyconverterkartyshova.CurrencyViewModel
-import ru.pdr.currencyconverterkartyshova.api.CurrenciesRepository
-import ru.pdr.currencyconverterkartyshova.api.CurrenciesRepositoryImpl
-import ru.pdr.currencyconverterkartyshova.api.CurrencyApi
-import ru.pdr.currencyconverterkartyshova.api.RetrofitClient
+import ru.pdr.currencyconverterkartyshova.api.*
 import ru.pdr.currencyconverterkartyshova.data.CurrencyDatabase
 import java.text.SimpleDateFormat
 import java.util.*
 
 val koinModule = module {
-    viewModel { CurrencyViewModel(get(), get()) }
+    viewModel { CurrencyViewModel(get()) }
     viewModel { CurrencyTransferViewModel() }
     single {
         RetrofitClient
@@ -23,7 +20,9 @@ val koinModule = module {
             .create(CurrencyApi::class.java)
     }
 
-    single<CurrenciesRepository> { CurrenciesRepositoryImpl(get(), get(), get()) }
+    single<CurrenciesRepository> { CurrenciesRepositoryImpl(get(), get()) }
+    single<LocalCurrenciesRepository> {LocalCurrenciesRepositoryImpl(get()) }
+    single<RemoteCurrenciesRepository> {RemoteCurrenciesRepositoryImpl(get()) }
 
     single {
         Room.databaseBuilder(androidContext(), CurrencyDatabase::class.java, "internship_db")
@@ -32,5 +31,4 @@ val koinModule = module {
 
     single { get<CurrencyDatabase>().currencyDao()}
 
-    single { SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)}
 }

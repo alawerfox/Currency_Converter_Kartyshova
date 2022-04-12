@@ -11,8 +11,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class CurrencyViewModel(
-    private val currenciesRepository: CurrenciesRepository,
-    private val dateFormat: SimpleDateFormat
+    private val currenciesRepository: CurrenciesRepository
 ) : ViewModel() {
     private val _currency = MutableLiveData<List<Currency>>()
     val currency: LiveData<List<Currency>>
@@ -24,7 +23,7 @@ class CurrencyViewModel(
 
     val progress = MutableLiveData<Boolean>()
 
-
+    private val dateFormat: SimpleDateFormat=SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
     fun onDateChanged(date: Date) {
         progress.value = true
         viewModelScope.launch {
